@@ -1,0 +1,14 @@
+{
+    "name": "studycs/demo",
+    "description": "composer tetest",
+    "type": "project",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "cloudcs",
+            "email": "cloudcs@sina.cn"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
