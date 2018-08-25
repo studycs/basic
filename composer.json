@@ -1,12 +1,12 @@
 {
-    "name": "studycs/demo",
-    "description": "composer tetest",
+    "name": "studycs/basic",
+    "description": "yii2 basic template",
     "type": "project",
     "license": "mit",
     "authors": [
         {
-            "name": "cloudcs",
-            "email": "cloudcs@sina.cn"
+            "name": "studycs",
+            "email": "studycs@qq.com"
         }
     ],
     "minimum-stability": "stable",
