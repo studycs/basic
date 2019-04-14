@@ -1,9 +1,10 @@
 <?php
 
-namespace app\models;
+namespace app\formEntity;
 
 use Yii;
 use yii\base\Model;
+use app\models\User;
 
 /**
  * LoginForm is the model behind the login form.
@@ -32,6 +33,15 @@ class LoginForm extends Model
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
+        ];
+    }
+
+    public function attributeLabels()
+    {
+        return [
+            'username'=>\yii::t('app','username'),
+            'password'=>\yii::t('app','password'),
+            'rememberMe'=>\yii::t('app','rememberMe'),
         ];
     }
 

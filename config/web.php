@@ -1,26 +1,24 @@
 <?php
-
 $params = require __DIR__ . '/params.php';
-$db = require __DIR__ . '/db.php';
-
 $config = [
     'id' => 'basic',
+    'language'=>'zh-CN',
+    'sourceLanguage'=>'en-US',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'components' => [
-        'request' => ['cookieValidationKey' => 'hOGmEgkIyjIFlZuucFxXjjVnInLwBdVMhdK2qoiGnM'],
-        'cache' => ['class' => 'yii\caching\FileCache'],
-        'user' => ['identityClass' => 'app\models\User','enableAutoLogin' => true,],
-        'errorHandler' => ['errorAction' => 'site/error'],
-        'mailer' => ['class' => 'yii\swiftmailer\Mailer','useFileTransport' => true],
-        'log' => ['class'=>\app\components\Dispatcher::class],
-        'db' => ['class'=>\app\components\Connection::class],
+    'components'=> [
+        'user'=>['class'=>\app\components\User::class],
+        'cache'=>['class'=>\yii\caching\FileCache::class],
+        'db'=>['class'=>\app\components\Connection::class],
+        'log'=>['class'=>\app\components\Dispatcher::class],
+        'request'=>['class'=>\app\components\Request::class],
+        'urlManager'=>['class'=>\app\components\UrlManager::class],
         'assetManager'=>['class'=>\app\components\AssetManager::class],
-        'urlManager' => ['class'=>\app\components\UrlManager::class],
+        'errorHandler'=>['class'=>\app\components\ErrorHandler::class],
     ],
     'params' => $params,
 ];

@@ -6,15 +6,15 @@ class Connection extends \yii\db\Connection
     /**
      * @var string $dsn
      */
-    public $dsn = 'mysql:host=localhost;dbname=yii2basic';
+    public $dsn = DB_DSN;
     /**
      * @var string $username
      */
-    public $username = 'root';
+    public $username = DB_USERNAME;
     /**
      * @var string $password
      */
-    public $password = '';
+    public $password = DB_PASSWORD;
     /**
      * @var string $charset
      */
@@ -26,7 +26,7 @@ class Connection extends \yii\db\Connection
     /**
      * @var int $schemaCacheDuration
      */
-    public $schemaCacheDuration = 60;
+    public $schemaCacheDuration = 3600;
     /**
      * @var string $schemaCache
      */
