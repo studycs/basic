@@ -11,8 +11,7 @@ class HelloController extends Controller
      */
     public function actionIndex($message = 'hello world'): int
     {
-        echo $message . "\n";
-
+        var_dump(\Yii::$aliases);
         return ExitCode::OK;
     }
 }

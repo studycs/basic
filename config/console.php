@@ -7,8 +7,10 @@ $config = [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\commands',
     'aliases' => [
-        '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset'
+        '@root'   =>  dirname(__DIR__),
+        '@bower'  => '@vendor/bower-asset',
+        '@npm'    => '@vendor/npm-asset',
+        '@runtime'=> '@root/runtime'
     ],
     'components' => [
         'cache' => ['class' => \yii\caching\FileCache::class],

@@ -7,8 +7,10 @@ $config = [
     'basePath' => __DIR__.'/../src',
     'bootstrap' => ['log'],
     'aliases' => [
-        '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@root'   =>  dirname(__DIR__),
+        '@bower'  => '@vendor/bower-asset',
+        '@npm'    => '@vendor/npm-asset',
+        '@runtime'=> '@root/runtime'
     ],
     'components'=> [
         'user'=>['class'=>\app\components\User::class],
