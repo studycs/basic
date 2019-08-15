@@ -20,7 +20,7 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'https://unpkg.com/yii2php@1.0.4/dist/css/site.min.css',
+        'https://unpkg.zhimg.com/yii2php@1.0.4/dist/css/site.min.css',
     ];
 
     public $js = [
@@ -28,7 +28,7 @@ class AppAsset extends AssetBundle
     ];
 
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        \yii\web\YiiAsset::class,
+        \yii\bootstrap\BootstrapAsset::class,
     ];
 }
