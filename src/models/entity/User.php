@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace app\models\entity;
 
 class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
 {
@@ -51,10 +51,8 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
     }
 
     /**
-     * Finds user by username
-     *
-     * @param string $username
-     * @return static|null
+     * @param $username
+     * @return mixed
      */
     public static function findByUsername($username)
     {

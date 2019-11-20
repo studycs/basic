@@ -10,7 +10,7 @@ $config = [
         '@root'   =>  dirname(__DIR__),
         '@bower'  => '@vendor/bower-asset',
         '@npm'    => '@vendor/npm-asset',
-        '@runtime'=> '@root/runtime'
+        '@app/web'=> '@root/web',
     ],
     'components' => [
         'cache' => ['class' => \yii\caching\FileCache::class],

@@ -5,12 +5,12 @@ $config = [
     'language'=>'zh-CN',
     'sourceLanguage'=>'en-US',
     'basePath' => __DIR__.'/../src',
+    'runtimePath'=>__DIR__.'/../runtime',
     'bootstrap' => ['log'],
     'aliases' => [
         '@root'   =>  dirname(__DIR__),
         '@bower'  => '@vendor/bower-asset',
-        '@npm'    => '@vendor/npm-asset',
-        '@runtime'=> '@root/runtime'
+        '@npm'    => '@vendor/npm-asset'
     ],
     'components'=> [
         'user'=>['class'=>\app\components\User::class],
@@ -31,7 +31,6 @@ if (YII_ENV_DEV) {
         'class' => 'yii\debug\Module',
         'allowedIPs' => ['127.0.0.1', '::1'],
     ];
-
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',

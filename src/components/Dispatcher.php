@@ -1,26 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 2018/12/8
- * Time: 16:07
- */
-
 namespace app\components;
-
-
 use yii\log\FileTarget;
 use yii\log\Target;
-
+/**
+ * Class Dispatcher
+ * @package app\components
+ */
 class Dispatcher extends \yii\log\Dispatcher
 {
-    /**
-     * @var int $traceLevel
-     */
+    /** @var int $traceLevel */
     public $traceLevel = YII_DEBUG ? 3 : 0;
-    /**
-     * @var array
-     */
+
+    /** @var array $targets */
     public $targets = [
         [
             'class'=>FileTarget::class,
